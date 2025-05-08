@@ -3,6 +3,8 @@ import { supabase } from "./lib/supabaseClient"
 import { LandingPage } from "./components/LandingPage"
 import ProductPage from "./components/ProductPage"
 import PaymentPage from "./components/PaymentPage"
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import ChatWithPdf from './components/ChatWithPdf';
 
 const PROFILES_TABLE = 'profiles'
 
@@ -63,7 +65,15 @@ const App: React.FC = () => {
   if (authState === 'loading') return null
   if (authState === 'signedOut') return <LandingPage />
   if (authState === 'nonpaying') return <PaymentPage />
-  return <ProductPage />
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProductPage />} />
+        <Route path="/chat" element={<ChatWithPdf />} />
+        <Route path="/success" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App 
