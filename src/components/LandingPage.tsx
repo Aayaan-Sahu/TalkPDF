@@ -37,7 +37,7 @@ export const LandingPage: React.FC = () => {
       {/* Top Nav */}
       <nav className="w-full flex items-center justify-between px-8 py-6 border-b bg-white/80 backdrop-blur z-10 animate-fade-in-down duration-700">
         <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold tracking-tight text-primary">ChatPDF</span>
+          <span className="text-2xl font-bold tracking-tight text-primary">TalkPDF</span>
         </div>
         <div>
           <Button
@@ -57,18 +57,18 @@ export const LandingPage: React.FC = () => {
         <section className="w-full px-4 py-16 animate-fade-in-up duration-700">
           <div className="max-w-2xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight animate-fade-in-up duration-700 delay-100">
-              <span className="inline-block animate-hero-pop">Instantly <span className="text-primary">Chat</span> with Any PDF</span><br />
+              <span className="inline-block animate-hero-pop">Instantly <span className="text-primary">Talk</span> to Any PDF</span><br />
               <span className="text-muted-foreground font-medium text-2xl block mt-2 animate-fade-in-up duration-700 delay-200">Your documents, now interactive.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 animate-fade-in-up duration-700 delay-300">
-              ChatPDF lets you upload any PDF and start a conversation with its contents. Ask questions, get summaries, and extract insights in seconds. No more endless scrolling or searching—just ask.
+              TalkPDF lets you upload any PDF and start a conversation with its contents. Ask questions, get summaries, and extract insights in seconds. No more endless scrolling or searching—just ask.
             </p>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="max-w-5xl mx-auto px-4 py-16" id="features">
-          <h2 className="text-3xl font-bold text-center mb-10 animate-fade-in-up duration-700 delay-200">Why ChatPDF?</h2>
+          <h2 className="text-3xl font-bold text-center mb-10 animate-fade-in-up duration-700 delay-200">Why TalkPDF?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 rounded-2xl border bg-white shadow text-center flex flex-col items-center animate-fade-in-up duration-700 delay-100 hover:shadow-xl transition-all">
               <span className="text-4xl mb-4">💬</span>
@@ -91,7 +91,7 @@ export const LandingPage: React.FC = () => {
 
       {/* Footer */}
       <footer className="w-full text-center text-gray-400 py-6 text-sm bg-white border-t mt-8 animate-fade-in-up duration-700 delay-700 sticky bottom-0">
-        &copy; {new Date().getFullYear()} ChatPDF. All rights reserved.
+        &copy; {new Date().getFullYear()} TalkPDF. All rights reserved.
       </footer>
     </div>
   )

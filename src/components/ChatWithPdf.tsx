@@ -97,7 +97,7 @@ const ChatWithPdf: React.FC = () => {
         >
           <BackIcon className="h-7 w-7 text-gray-700" />
         </button>
-        <span className="text-2xl font-bold tracking-tight text-primary">ChatPDF</span>
+        <span className="text-2xl font-bold tracking-tight text-primary">TalkPDF</span>
         <div style={{ width: 40 }} /> {/* Spacer for symmetry */}
       </nav>
       {/* Chat Area */}

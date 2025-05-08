@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"node api/create-checkout-session.js\" \"node api/stripe-webhook.js\" \"vite\"",
+    "dev": "concurrently \"node api/create-checkout-session.js\" \"node api/stripe-webhook.js\" \"cd rs-backend && source .venv/bin/activate && python3 -m uvicorn main:app --reload --port 8000\" \"vite\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

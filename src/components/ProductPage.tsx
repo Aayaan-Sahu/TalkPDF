@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '../lib/supabaseClient';
 
 const ProductPage: React.FC = () => {
   const [pdfFile, setPdfFile] = useState<File | null>(null);
@@ -41,16 +42,22 @@ const ProductPage: React.FC = () => {
     }
   };
 
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900 px-0">
       {/* Navbar */}
       <nav className="w-full flex items-center justify-between px-8 py-6 border-b bg-white/80 backdrop-blur z-10 animate-fade-in-down duration-700">
         <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold tracking-tight text-primary">ChatPDF</span>
+          <span className="text-2xl font-bold tracking-tight text-primary">TalkPDF</span>
         </div>
         <div>
           <button
             className="bg-gray-100 text-gray-800 hover:bg-gray-200 font-semibold shadow rounded-xl px-6 py-2 transition-all duration-200 border border-gray-200"
+            onClick={handleLogout}
           >
             Logout
           </button>
