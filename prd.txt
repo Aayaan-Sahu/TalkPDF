@@ -1,0 +1,5 @@
+1] add tailwindcss and shadcdn support, making sure that it is funny integrated
+2] Create a landing page that contains some basic, modern, placeholder text
+    - The landing page should have a login button
+3] The login button should allow the user to authenticate themselves via supabase with google authentication
+4] once authenticated, the user should be prompted to buy the product, using a stripe integration
